@@ -13,9 +13,15 @@ TEST( LogTest, LogString )
 	logger.log( msg );
 
 	//Assert
-	std::string output = testing::internal::GetCapturedStdout();
-	ASSERT_EQ( output, msg + "\n" );
+	std::string actual = testing::internal::GetCapturedStdout();
+	
+	std::time_t currTime = std::time(nullptr);
+	std::string time = std::asctime(std::localtime(&currTime));
+	time.pop_back();
 
+	std::string expected = time + " - " + msg + "\n";
+
+	ASSERT_EQ( actual, expected );
 }
 
 TEST( LogTest, LogChar )  
@@ -29,6 +35,13 @@ TEST( LogTest, LogChar )
 	logger.log( msg.c_str() );
 
 	//Assert
-	std::string output = testing::internal::GetCapturedStdout();
-	ASSERT_EQ( output, msg + "\n" );
+	std::string actual = testing::internal::GetCapturedStdout();
+	
+	std::time_t currTime = std::time(nullptr);
+	std::string time = std::asctime(std::localtime(&currTime));
+	time.pop_back();
+
+	std::string expected = time + " - " + msg + "\n";
+
+	ASSERT_EQ( actual, expected );
 }

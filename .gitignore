@@ -20,6 +20,12 @@ sites
 *.mod
 *.smod
 
+# Text Files
+*.txt
+
+# CMake Files
+*.cmake
+
 # Compiled Static libraries
 *.lai
 *.la

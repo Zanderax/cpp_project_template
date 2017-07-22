@@ -8,7 +8,6 @@ class Logger
 public:
 	void log( const char * msg );
 	void log( std::string msg );
-	int test();
 };
 
 #endif

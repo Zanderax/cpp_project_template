@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named runTests
+# Target rules for targets named runTests.out
 
 # Build rule for target.
-runTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runTests
-.PHONY : runTests
+runTests.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTests.out
+.PHONY : runTests.out
 
 # fast build rule for target.
-runTests/fast:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
-.PHONY : runTests/fast
+runTests.out/fast:
+	$(MAKE) -f CMakeFiles/runTests.out.dir/build.make CMakeFiles/runTests.out.dir/build
+.PHONY : runTests.out/fast
 
 tests.o: tests.cpp.o
 
@@ -129,7 +129,7 @@ tests.o: tests.cpp.o
 
 # target to build an object file
 tests.cpp.o:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.o
+	$(MAKE) -f CMakeFiles/runTests.out.dir/build.make CMakeFiles/runTests.out.dir/tests.cpp.o
 .PHONY : tests.cpp.o
 
 tests.i: tests.cpp.i
@@ -138,7 +138,7 @@ tests.i: tests.cpp.i
 
 # target to preprocess a source file
 tests.cpp.i:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.i
+	$(MAKE) -f CMakeFiles/runTests.out.dir/build.make CMakeFiles/runTests.out.dir/tests.cpp.i
 .PHONY : tests.cpp.i
 
 tests.s: tests.cpp.s
@@ -147,7 +147,7 @@ tests.s: tests.cpp.s
 
 # target to generate assembly for a file
 tests.cpp.s:
-	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.s
+	$(MAKE) -f CMakeFiles/runTests.out.dir/build.make CMakeFiles/runTests.out.dir/tests.cpp.s
 .PHONY : tests.cpp.s
 
 # Help Target
@@ -157,7 +157,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... runTests"
+	@echo "... runTests.out"
 	@echo "... edit_cache"
 	@echo "... tests.o"
 	@echo "... tests.i"
