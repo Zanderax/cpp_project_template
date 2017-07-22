@@ -31,7 +31,10 @@ sites
 *.out
 *.appeinclude
 
-#Directories
+# Swap Files
+*.sw*
+
+# Directories
 bin/
 CMakeFiles/ 
 
