@@ -40,6 +40,12 @@ sites
 # Swap Files
 *.sw*
 
+# Core Files
+core
+
+# Log Files
+*.log
+
 # Directories
 bin/
 CMakeFiles/ 
